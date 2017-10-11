@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BusToGoAppliction</string>
+    <string name="Bus">Bus To Go Appliction</string>
+    <string name="แอพ">แอพพลิเคชันแนะนำรถประจำทางที่ผ่านเขตพระนคร</string>
+    <string name="Language">Language Settings</string>
+    <string name="Th">Thai</string>
+    <string name="En">English</string>
+    <string name="สาย">สายรถเมล์</string>
+    <string name="ถนน">ถนนเเละสถานที่สำคัญ</string>
+    <string name="ต้น">ต้นทางและปลายทาง</string>
+    <string name="ข่าว">ข่าวสาร</string>
+    <string name="สิบสอง">เสาชิงช้า เป็นสถาปัตยกรรมที่สร้างขึ้นเพื่อใช้ประกอบพิธีโล้ชิงช้า ในพระราชพิธีตรียัมพวาย ตรีปวายของศาสนาพราหมณ์-ฮินดู
+        โดยทั่วไปหมายถึงเสาชิงช้าที่ตั้งอยู่หน้าวัดสุทัศน์เทพวราราม และลานหน้าศาลาว่าการกรุงเทพมหานคร (ลานคนเมือง) ใกล้กับเทวสถานโบสถ์พราหมณ์
+        ในพื้นที่แขวงเสาชิงช้าและแขวงวัดราชบพิธ เขตพระนคร กรุงเทพมหานคร ซึ่งถือเป็นสัญลักษณ์อย่างหนึ่งของกรุงเทพมหานคร แม้พิธีโล้ชิงช้าได้เลิกไป
+        แล้วตั้งแต่สมัยพระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัว รัชกาลที่ 7 ก็ตาม</string>
+
+    <string name="สิบสองง"> สายรถที่ผ่าน  10, 12, 15, 19, 35, 42, 48, 73, 96</string>
+    <string name="title_activity_test_adapter">TestAdapter</string>
+
+
+</resources>
