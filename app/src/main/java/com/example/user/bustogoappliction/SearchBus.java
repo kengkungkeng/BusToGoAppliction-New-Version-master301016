@@ -5,15 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class StartorDestination extends AppCompatActivity {
+public class SearchBus extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_startor_destination);
+        setContentView(R.layout.activity_search_bus);
     }
-    public void button5 (View view) {
-        Intent intent = new Intent(StartorDestination.this,Mainmenu.class);
+
+    public void btnsearch (View view) {
+        Intent intent = new Intent(SearchBus.this,Mainmenu.class);
         startActivity(intent);
     }
 }

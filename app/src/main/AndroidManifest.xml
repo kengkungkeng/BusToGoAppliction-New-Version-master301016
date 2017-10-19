@@ -23,14 +23,14 @@
         <activity android:name=".Mainmenu" />
         <activity android:name=".NumberBus" />
         <activity android:name=".Road" />
-        <activity android:name=".StartorDestination" />
         <activity android:name=".News" />
         <activity android:name=".detail" />
         <activity android:name=".GiantSwing" />
         <activity
             android:name=".TestAdapter"
             android:label="@string/title_activity_test_adapter"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".SearchBus"></activity>
     </application>
 
 </manifest>

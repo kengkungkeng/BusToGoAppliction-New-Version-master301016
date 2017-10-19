@@ -28,7 +28,7 @@ public class Mainmenu extends AppCompatActivity {
         startActivity(intent);
     }
     public void imvc (View view) {
-        Intent intent = new Intent(Mainmenu.this,StartorDestination.class);
+        Intent intent = new Intent(Mainmenu.this,SearchBus.class);
         startActivity(intent);
     }
 }
