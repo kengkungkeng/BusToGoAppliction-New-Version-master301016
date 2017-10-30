@@ -71,8 +71,8 @@ public class NumberBus extends AppCompatActivity {
     }
 
     public void button2 (View view) {
-        Intent intent = new Intent(NumberBus.this,Mainmenu.class);
-        startActivity(intent);
+        new Intent(NumberBus.this,Mainmenu.class);
+        finish();
     }
 
 }

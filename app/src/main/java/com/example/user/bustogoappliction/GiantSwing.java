@@ -35,8 +35,8 @@ public class GiantSwing extends AppCompatActivity {
     }
 
     public void button7 (View view) {
-        Intent intent = new Intent(GiantSwing.this,Road.class);
-        startActivity(intent);
+        new Intent(GiantSwing.this,Road.class);
+        finish();
     }
 
 

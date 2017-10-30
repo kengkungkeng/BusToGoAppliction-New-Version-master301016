@@ -30,7 +30,8 @@
             android:name=".TestAdapter"
             android:label="@string/title_activity_test_adapter"
             android:theme="@style/AppTheme" />
-        <activity android:name=".SearchBus"></activity>
+        <activity android:name=".Search.SearchPlace" />
+        <activity android:name=".Search.SearchMenu" />
     </application>
 
 </manifest>

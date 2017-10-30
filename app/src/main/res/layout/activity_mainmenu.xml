@@ -64,7 +64,6 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_weight="0.22"
                 android:background="#abd938"
                 android:onClick="imvc"
                 app:layout_constraintBottom_toTopOf="@+id/imvd"

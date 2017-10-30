@@ -75,8 +75,8 @@ public class Road extends AppCompatActivity {
     */
 
     public void btnRoad (View view) {
-        Intent intent = new Intent(Road.this,Mainmenu.class);
-        startActivity(intent);
+        new Intent(Road.this,Mainmenu.class);
+        finish();
     }
 
 }

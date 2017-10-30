@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.user.bustogoappliction.Search.SearchMenu;
+import com.example.user.bustogoappliction.Search.SearchPlace;
+
 public class Mainmenu extends AppCompatActivity {
 
     @Override
@@ -28,7 +31,7 @@ public class Mainmenu extends AppCompatActivity {
         startActivity(intent);
     }
     public void imvc (View view) {
-        Intent intent = new Intent(Mainmenu.this,SearchBus.class);
+        Intent intent = new Intent(Mainmenu.this,SearchMenu.class);
         startActivity(intent);
     }
 }
