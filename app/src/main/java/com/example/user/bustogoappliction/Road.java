@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.example.user.bustogoappliction.Database.BusTale;
 import com.example.user.bustogoappliction.Database.PlaceTable;
+import com.example.user.bustogoappliction.Detail.PlaceDetail;
 
 public class Road extends AppCompatActivity {
     private PlaceTable objPlaceTable;
@@ -45,7 +46,7 @@ public class Road extends AppCompatActivity {
                 image_bus = image;//เก็บค่าตัวแปรจากจาก SQL
                 latitude = latt;//เก็บค่าตัวแปรจากจาก SQL
                 longitude = longg;//เก็บค่าตัวแปรจากจาก SQL
-                Intent intent = new Intent(Road.this, GiantSwing.class);//ส่งค่าข้อมูลจากดาต้าเบสไปหน้า GiantSwing
+                Intent intent = new Intent(Road.this, PlaceDetail.class);//ส่งค่าข้อมูลจากดาต้าเบสไปหน้า GiantSwing
                 intent.putExtra("title", titles[position]);
                 intent.putExtra("detail", detail[position]);
                 intent.putExtra("image", image[position]);

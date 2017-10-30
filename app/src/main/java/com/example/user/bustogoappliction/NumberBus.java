@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.user.bustogoappliction.Database.BusTale;
+import com.example.user.bustogoappliction.Detail.BusDetail;
 
 public class NumberBus extends AppCompatActivity {
     private BusTale objBusTale;
@@ -52,7 +53,7 @@ public class NumberBus extends AppCompatActivity {
                 detail_bus = detail;
                 image_bus = image;
 
-                Intent intent = new Intent(NumberBus.this,detail.class);
+                Intent intent = new Intent(NumberBus.this,BusDetail.class);
                 intent.putExtra("Title",titles_bus[position]);
                 intent.putExtra("Detail",detail_bus[position]);
                 intent.putExtra("Image",image_bus[position]);
