@@ -32,6 +32,7 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".Search.SearchPlace" />
         <activity android:name=".Search.SearchMenu" />
+        <activity android:name=".Detail.BusDeail"></activity>
     </application>
 
 </manifest>

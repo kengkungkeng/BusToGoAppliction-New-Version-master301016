@@ -14,7 +14,7 @@ public class detail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        TextView titleTextView = (TextView) findViewById(R.id.txtTitleDetail);
+        TextView titleTextView = (TextView) findViewById(R.id.titlebus);
         TextView detailTextView = (TextView)findViewById(R.id.txtDetailSco);
         ImageView imageView = (ImageView)findViewById(R.id.imvimageDetail);
         Button button =(Button)findViewById(R.id.btnBack);
@@ -24,6 +24,5 @@ public class detail extends AppCompatActivity {
 
     }
 
-    public void clickBack (View view) {finish();}
 
 }
