@@ -34,4 +34,8 @@ public class Mainmenu extends AppCompatActivity {
         Intent intent = new Intent(Mainmenu.this,SearchMenu.class);
         startActivity(intent);
     }
+    public void imvi (View view){
+        Intent intent = new Intent(Mainmenu.this,Infomation.class);
+        startActivity(intent);
+    }
 }

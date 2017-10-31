@@ -1,13 +1,17 @@
 package com.example.user.bustogoappliction;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.example.user.bustogoappliction.Database.BusTale;
 import com.example.user.bustogoappliction.Database.PlaceTable;
@@ -19,6 +23,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -27,20 +32,41 @@ import java.io.InputStreamReader;
 public class MainActivity extends AppCompatActivity {
     private BusTale objBusTale;
     private PlaceTable objPlaceTable;
-
-
+    private static int Time_Splash = 3000;
+    Typeface myfont;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        font();
         Cdatabase();
-       deleteAlldata();
-       synJSONtoSQLite();
+        deleteAlldata();
+        synJSONtoSQLite();
+        openmainmenu();
+    }
+
+    private void font() {
+        myfont = Typeface.createFromAsset(getAssets(),"waan.ttf");
+        TextView op1 = (TextView) findViewById(R.id.textOP1);
+        op1.setTypeface(myfont);
+        TextView op2 = (TextView) findViewById(R.id.textOP2);
+        op2.setTypeface(myfont);
+
+    }
+
+    private void openmainmenu() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(MainActivity.this,Mainmenu.class);
+                startActivity(intent);
+                finish();
+            }
+        },Time_Splash);
     }
 
     private void deleteAlldata() {
-        SQLiteDatabase objSqLiteDatabase = openOrCreateDatabase("Bus.db", MODE_APPEND, null);
+        @SuppressLint("WrongConstant") SQLiteDatabase objSqLiteDatabase = openOrCreateDatabase("Bus.db", MODE_APPEND, null);
         objSqLiteDatabase.delete("bustable", null, null);
         objSqLiteDatabase.delete("placetable", null, null);
 
@@ -127,8 +153,5 @@ public class MainActivity extends AppCompatActivity {
         objPlaceTable = new PlaceTable(this);
     }
 
-    public void btn2 (View view) {
-        Intent intent = new Intent(MainActivity.this,Mainmenu.class);
-        startActivity(intent);
-    }
+
 }

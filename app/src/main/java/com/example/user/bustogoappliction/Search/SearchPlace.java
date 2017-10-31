@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.user.bustogoappliction.Database.PlaceTable;
@@ -23,6 +24,7 @@ public class SearchPlace extends AppCompatActivity {
     private String[] title_place,image_place,latt_place,lonn_place,detail_place;
     private String[] titlesql_place,detailsql_place,imagesql_place,lattsql_place,lonnsql_place;
 
+    ImageView finishpage;
     EditText el;
     ListView lv;
     ArrayAdapter<String> adapter2;
@@ -35,6 +37,7 @@ public class SearchPlace extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_place);
         connect();
+        bthBack();
         el = (EditText)findViewById(R.id.searchp);
         lv = (ListView)findViewById(R.id.lvsp);
 
@@ -89,6 +92,16 @@ public class SearchPlace extends AppCompatActivity {
         });
 
 
+    }
+
+    private void bthBack() {
+        finishpage = (ImageView) findViewById(R.id.btnGooback);
+        finishpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void connect() {

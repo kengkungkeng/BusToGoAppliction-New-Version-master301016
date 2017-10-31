@@ -32,7 +32,8 @@
         <activity android:name=".Search.SearchMenu" />
         <activity android:name=".Detail.BusDetail" />
         <activity android:name=".Detail.PlaceDetail" />
-        <activity android:name=".Search.SearchBus"></activity>
+        <activity android:name=".Search.SearchBus" />
+        <activity android:name=".Infomation"></activity>
     </application>
 
 </manifest>

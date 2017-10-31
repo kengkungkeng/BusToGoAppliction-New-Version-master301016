@@ -42,9 +42,7 @@ public class PlaceDetail extends AppCompatActivity {
 
     public  void link (View view){
 
-        //String lat = "13.751876";
-        //String lng = "100.501231";
-        //String GiantSwing = "Giant Swing";
+
         String lat = getIntent().getStringExtra("lat");//รับค่ามาจาก ดาต้าเบสเพื่อคลิกแล้วจะแสดงตามค่า lat + long ที่เก็บไว้
         String log = getIntent().getStringExtra("long");
         String title = getIntent().getStringExtra("title");

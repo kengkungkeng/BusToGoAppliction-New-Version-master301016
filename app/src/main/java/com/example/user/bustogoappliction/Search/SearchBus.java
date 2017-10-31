@@ -1,6 +1,10 @@
 package com.example.user.bustogoappliction.Search;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Typeface;
+import android.media.Image;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -9,7 +13,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.user.bustogoappliction.Database.BusTale;
 import com.example.user.bustogoappliction.Detail.BusDetail;
@@ -23,6 +29,8 @@ public class SearchBus extends AppCompatActivity {
     private String[] title_bus,detail_bus,image_bus;
     private String[] titlesql_bus,detailsql_bus,imagesql_bus;
 
+    Typeface myfont;
+    ImageView finishpage;
     EditText elb;
     ListView lvb;
     ArrayAdapter<String> adapterb;
@@ -32,8 +40,10 @@ public class SearchBus extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_bus);
-
+        font();
         connectb();
+        btnoriginal();
+
         elb = (EditText)findViewById(R.id.searchb);
         lvb = (ListView)findViewById(R.id.lvsb);
 
@@ -74,6 +84,24 @@ public class SearchBus extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
 
+            }
+        });
+
+
+    }
+
+    private void font() {
+        myfont = Typeface.createFromAsset(getAssets(),"waan.ttf");
+        EditText font = (EditText)findViewById(R.id.searchb);
+        font.setTypeface(myfont);
+    }
+
+    private void btnoriginal() {
+        finishpage = (ImageView) findViewById(R.id.btnGoback);
+        finishpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }
