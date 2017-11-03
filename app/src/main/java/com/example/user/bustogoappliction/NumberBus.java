@@ -7,11 +7,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.user.bustogoappliction.Database.BusTale;
+import com.example.user.bustogoappliction.Database.BusTable;
 import com.example.user.bustogoappliction.Detail.BusDetail;
 
 public class NumberBus extends AppCompatActivity {
-    private BusTale objBusTale;
+    private BusTable objBusTable;
 
     //Explicit
     ListView listView;
@@ -33,9 +33,9 @@ public class NumberBus extends AppCompatActivity {
 
     private void Clistview() {
 
-        final String[] titles = objBusTale.readAllBus(1);
-        final String[] detail = objBusTale.readAllBus(3);
-        final String[] image = objBusTale.readAllBus(2);
+        final String[] titles = objBusTable.readAllBus(1);
+        final String[] detail = objBusTable.readAllBus(3);
+        final String[] image = objBusTable.readAllBus(2);
 
 
 
@@ -64,7 +64,7 @@ public class NumberBus extends AppCompatActivity {
 
 
     private void c() {
-        objBusTale = new BusTale(this);
+        objBusTable = new BusTable(this);
     }
 
     private void BindWidget() {

@@ -24,16 +24,12 @@
         <activity android:name=".NumberBus" />
         <activity android:name=".Road" />
         <activity android:name=".News" />
-        <activity
-            android:name=".TestAdapter"
-            android:label="@string/title_activity_test_adapter"
-            android:theme="@style/AppTheme" />
         <activity android:name=".Search.SearchPlace" />
         <activity android:name=".Search.SearchMenu" />
         <activity android:name=".Detail.BusDetail" />
         <activity android:name=".Detail.PlaceDetail" />
+        <activity android:name=".Infomation" />
         <activity android:name=".Search.SearchBus" />
-        <activity android:name=".Infomation"></activity>
     </application>
 
 </manifest>

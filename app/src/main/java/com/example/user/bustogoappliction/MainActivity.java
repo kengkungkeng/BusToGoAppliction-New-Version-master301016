@@ -9,11 +9,9 @@ import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Switch;
 import android.widget.TextView;
 
-import com.example.user.bustogoappliction.Database.BusTale;
+import com.example.user.bustogoappliction.Database.BusTable;
 import com.example.user.bustogoappliction.Database.PlaceTable;
 
 import org.apache.http.HttpEntity;
@@ -23,14 +21,13 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
-    private BusTale objBusTale;
+    private BusTable objBusTable;
     private PlaceTable objPlaceTable;
     private static int Time_Splash = 3000;
     Typeface myfont;
@@ -127,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                             String strbusname = jsonObject.getString("bus_name");
                             String strbusdetail = jsonObject.getString("bus_detail");
                             String strbuspic = jsonObject.getString("bus_pic");
-                            objBusTale.AddNewBusTable(stridbus, strbusname, strbusdetail, strbuspic);
+                            objBusTable.AddNewBusTable(stridbus, strbusname, strbusdetail, strbuspic);
                             break;
                         default:
                             //update placetable
@@ -149,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Cdatabase() {
-        objBusTale = new BusTale(this);
+        objBusTable = new BusTable(this);
         objPlaceTable = new PlaceTable(this);
     }
 

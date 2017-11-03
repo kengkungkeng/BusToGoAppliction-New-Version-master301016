@@ -7,13 +7,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.user.bustogoappliction.Database.BusTale;
+import com.example.user.bustogoappliction.Database.BusTable;
 import com.example.user.bustogoappliction.Database.PlaceTable;
 import com.example.user.bustogoappliction.Detail.PlaceDetail;
 
 public class Road extends AppCompatActivity {
     private PlaceTable objPlaceTable;
-    private BusTale objBusTale;
+    private BusTable objBusTable;
     ListView listView;
     private String[]titles_bus,detail_bus,image_bus,latitude,longitude;
 
@@ -62,7 +62,7 @@ public class Road extends AppCompatActivity {
 
     private void c() {
         objPlaceTable = new PlaceTable(this);
-        objBusTale = new BusTale(this);
+        objBusTable = new BusTable(this);
     }
 
     private void BindWidget() {

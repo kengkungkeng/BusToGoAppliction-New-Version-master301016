@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
  * Created by USER on 8/9/2560.
  */
 
-public class BusTale {
+public class BusTable {
     private MySQLiteOpenHelper objMySQLiteOpenHelper;
     private SQLiteDatabase writeSqLiteDatabase;
     private SQLiteDatabase readSqLiteDatabase;
@@ -20,7 +20,7 @@ public class BusTale {
     public static final String BUS_PIC = "pic_bus";
     public static final String BUS_DETAIL = "detail_bus";
 
-    public BusTale(Context context) {
+    public BusTable(Context context) {
         objMySQLiteOpenHelper = new MySQLiteOpenHelper(context);
         writeSqLiteDatabase = objMySQLiteOpenHelper.getWritableDatabase();
         readSqLiteDatabase = objMySQLiteOpenHelper.getReadableDatabase();
