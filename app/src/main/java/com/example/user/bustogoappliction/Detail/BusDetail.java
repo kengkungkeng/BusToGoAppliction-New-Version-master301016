@@ -14,7 +14,7 @@ public class BusDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bus_deail);
+        setContentView(R.layout.activity_bus_detail);
 
 
         TextView titleTextView = (TextView) findViewById(R.id.titlebus);

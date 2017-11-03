@@ -34,7 +34,7 @@ public class SearchBus extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_again);
+        setContentView(R.layout.activity_search_bus);
         objBusTable = new BusTable(this);
 
         data = objBusTable.readAllBus(1);
@@ -140,7 +140,7 @@ public class SearchBus extends AppCompatActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-            view = View.inflate(SearchBus.this,R.layout.item_search,null);
+            view = View.inflate(SearchBus.this,R.layout.item_search_bus,null);
             if (view != null){
                 holder.title = (TextView) view.findViewById(R.id.item_s);
                 holder.title.setText(mData.get(i).getTitle());
