@@ -22,4 +22,7 @@ public class SearchMenu extends AppCompatActivity {
         Intent intent=new Intent(SearchMenu.this,SearchPlace.class);
         startActivity(intent);
     }
+    public void imv_back(View view){
+        finish();
+    }
 }

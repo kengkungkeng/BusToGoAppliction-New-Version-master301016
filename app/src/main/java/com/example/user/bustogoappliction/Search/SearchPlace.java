@@ -185,5 +185,7 @@ public class SearchPlace extends AppCompatActivity {
 
         }
 
-
+     public void imv_back(View view){
+        finish();
+     }
 }

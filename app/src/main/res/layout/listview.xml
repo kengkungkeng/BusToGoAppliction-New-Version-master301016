@@ -40,16 +40,18 @@
         android:id="@+id/textView6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="@+id/linearLayout"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="@+id/linearLayout" />
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintLeft_toLeftOf="@+id/linearLayout"
+        app:layout_constraintRight_toRightOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
 </android.support.constraint.ConstraintLayout>
 

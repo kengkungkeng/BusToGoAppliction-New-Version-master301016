@@ -23,7 +23,7 @@ public class PlaceDetail extends AppCompatActivity {
         ImageView detailImageView = (ImageView) findViewById(R.id.detailimage);
         TextView titleTextView = (TextView) findViewById(R.id.titleRoad);
         TextView nobusTextView = (TextView) findViewById(R.id.noBus);
-        Button backButton = (Button) findViewById(R.id.btnBack);
+
         Button linkButton = (Button) findViewById(R.id.btnLink);
 
         titleTextView.setText(getIntent().getStringExtra("title"));       //รับค่าที่ส่งมาจากหน้า Road
@@ -34,8 +34,8 @@ public class PlaceDetail extends AppCompatActivity {
 
     }
 
-    public void button7 (View view) {
-        new Intent(PlaceDetail.this,Road.class);
+    public void imv_back (View view) {
+
         finish();
     }
 

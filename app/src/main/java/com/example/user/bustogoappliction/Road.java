@@ -75,8 +75,8 @@ public class Road extends AppCompatActivity {
     }
     */
 
-    public void btnRoad (View view) {
-        new Intent(Road.this,Mainmenu.class);
+    public void imv_back (View view) {
+
         finish();
     }
 

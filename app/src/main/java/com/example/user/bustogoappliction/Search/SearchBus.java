@@ -84,6 +84,7 @@ public class SearchBus extends AppCompatActivity {
 
             }
         });
+
     }
 
     private void doListSearch() {
@@ -156,6 +157,8 @@ public class SearchBus extends AppCompatActivity {
         }
 
     }
-
+        public void imv_back(View view){
+        finish();
+        }
 
 }

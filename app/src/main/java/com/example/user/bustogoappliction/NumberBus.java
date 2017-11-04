@@ -71,8 +71,8 @@ public class NumberBus extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.livBus);
     }
 
-    public void button2 (View view) {
-        new Intent(NumberBus.this,Mainmenu.class);
+    public void imv_back (View view) {
+
         finish();
     }
 

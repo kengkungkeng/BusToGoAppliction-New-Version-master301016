@@ -20,12 +20,12 @@ public class BusDetail extends AppCompatActivity {
         TextView titleTextView = (TextView) findViewById(R.id.titlebus);
         TextView detailTextView = (TextView)findViewById(R.id.txtDetailSco);
         ImageView imageView = (ImageView)findViewById(R.id.imvimageDetail);
-        Button button =(Button)findViewById(R.id.btnBack);
+
 
         titleTextView.setText(getIntent().getStringExtra("Title"));
         detailTextView.setText(getIntent().getStringExtra("Detail"));
 
 
     }
-    public void clickBack (View view) {finish();}
+    public void imv_back (View view) {finish();}
 }
