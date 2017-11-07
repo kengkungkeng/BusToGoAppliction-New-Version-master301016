@@ -21,14 +21,14 @@ import com.example.user.bustogoappliction.R;
 import java.util.ArrayList;
 
 public class SearchBus extends AppCompatActivity {
-    private String[] data;
-    private String[] data_detail;
+    private String[] data; //d1
+    private String[] data_detail; //d2
     private ListView listView;
     private BusTable objBusTable;
-    private ArrayList<ListEnty> data_n;
-    private ArrayList<ListEnty> data_search;
-    private ArrayList<ListEnty> data_detail_n;
-    private ArrayList<ListEnty> data_detail_search;
+    private ArrayList<ListEnty> data_n; // d1
+    private ArrayList<ListEnty> data_search; //d1
+    private ArrayList<ListEnty> data_detail_n; //2
+    private ArrayList<ListEnty> data_detail_search; //2
     private EditText editText;
 
     @Override
@@ -45,7 +45,7 @@ public class SearchBus extends AppCompatActivity {
         data_detail_n = new ArrayList<ListEnty>();
         for (int i=0;i<data_detail.length;i++){
             ListEnty listEnty =new ListEnty();
-            listEnty.setTitle(data_detail[i]);
+            listEnty.setDetail(data_detail[i]);
             data_detail_n.add(listEnty);
         }
         data_n = new ArrayList<ListEnty>();
@@ -66,13 +66,19 @@ public class SearchBus extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if (editText.length() !=0){
                     data_search = new ArrayList<ListEnty>();
+                    data_detail_search = new ArrayList<ListEnty>();
                     for (int k=0;k < data_n.size();k++ ){
                         if(data_n.get(k).getTitle().toLowerCase().contains(charSequence)){
                             ListEnty listEnty = new ListEnty();
+                            ListEnty listEnty_detail = new ListEnty();
                             listEnty.setTitle(data_n.get(k).getTitle());
+                            listEnty_detail.setDetail(data_detail_n.get(k).getDetail());
+                            data_detail_search.add(listEnty_detail);
                             data_search.add(listEnty);
+
                         }
                     }
+
                     doListSearch();
                 }else {
                     doListNomal();
@@ -95,7 +101,7 @@ public class SearchBus extends AppCompatActivity {
                 Toast.makeText(SearchBus.this,data_search.get(i).getTitle(),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SearchBus.this, BusDetail.class);
                 intent.putExtra("Title",data_search.get(i).getTitle());
-                intent.putExtra("Detail",data_detail_n.get(i).getTitle());
+                intent.putExtra("Detail",data_detail_search.get(i).getDetail());
                 startActivity(intent);
             }
         });
@@ -109,7 +115,7 @@ public class SearchBus extends AppCompatActivity {
                 Toast.makeText(SearchBus.this,data_n.get(i).getTitle(),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SearchBus.this, BusDetail.class);
                 intent.putExtra("Title",data_n.get(i).getTitle());
-                intent.putExtra("Detail",data_detail_n.get(i).getTitle());
+                intent.putExtra("Detail",data_detail_n.get(i).getDetail());
                 startActivity(intent);
 
             }

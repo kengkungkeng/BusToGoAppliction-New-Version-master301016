@@ -26,9 +26,8 @@ public class SearchPlace extends AppCompatActivity {
      private String[] data_detail,data_img,data_lon,data_lat;
      private ListView listView;
      private PlaceTable objPlaceTable;
-     private ArrayList<ListEnty> data_n;
-     private ArrayList<ListEnty> data_search;
-     private ArrayList<ListEnty> data_n_detail,data_n_img,data_n_lon,data_n_lat;
+     private ArrayList<ListEnty> data_search,data_search_detail,data_search_img,data_search_lon,data_search_lat;
+     private ArrayList<ListEnty> data_n,data_n_detail,data_n_img,data_n_lon,data_n_lat;
      private EditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,13 +87,30 @@ public class SearchPlace extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if (editText.length() != 0){
                     data_search = new ArrayList<ListEnty>();
+                    data_search_detail = new ArrayList<ListEnty>();
+                    data_search_img = new ArrayList<ListEnty>();
+                    data_search_lat = new ArrayList<ListEnty>();
+                    data_search_lon =new ArrayList<ListEnty>();
                     for (int k=0; k<data_n.size();k++){
                         if (data_n.get(k).getTitle().toLowerCase().contains(charSequence)){
                             ListEnty listEnty = new ListEnty();
+                            ListEnty listEnty_detail = new ListEnty();
+                            ListEnty listEnty_img = new ListEnty();
+                            ListEnty listEnty_lat = new ListEnty();
+                            ListEnty listEnty_lon = new ListEnty();
                             listEnty.setTitle(data_n.get(k).getTitle());
+                            listEnty_detail.setDetail(data_n_detail.get(k).getDetail());
+                            listEnty_img.setImg(data_n_img.get(k).getImg());
+                            listEnty_lon.setLon(data_n_lon.get(k).getLon());
+                            listEnty_lat.setLat(data_n_lat.get(k).getLat());
                             data_search.add(listEnty);
+                            data_search_detail.add(listEnty_detail);
+                            data_search_img.add(listEnty_img);
+                            data_search_lon.add(listEnty_lon);
+                            data_search_lat.add(listEnty_lat);
                         }
                     }
+
                     doListSearch();
                 }else {
                     doListNomal();
@@ -116,10 +132,10 @@ public class SearchPlace extends AppCompatActivity {
                 Toast.makeText(SearchPlace.this,data_search.get(i).getTitle(),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SearchPlace.this, PlaceDetail.class);
                 intent.putExtra("title",data_search.get(i).getTitle());
-                intent.putExtra("detail",data_n_detail.get(i).getDetail());
-                intent.putExtra("image",data_n_img.get(i).getImg());
-                intent.putExtra("lat",data_n_lat.get(i).getLat());
-                intent.putExtra("long",data_n_lon.get(i).getLon());
+                intent.putExtra("detail",data_search_detail.get(i).getDetail());
+                intent.putExtra("image",data_search_img.get(i).getImg());
+                intent.putExtra("lat",data_search_lat.get(i).getLat());
+                intent.putExtra("long",data_search_lon.get(i).getLon());
                 startActivity(intent);
             }
         });
